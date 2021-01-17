@@ -1,0 +1,27 @@
+# This represents the overall project name. 
+# Everything in here will be built into a .deb package for installation
+# Replace TweakName with the name of your project, of course
+name: Reach
+icmd: killall -9 SpringBoard
+id: im.clu3less.reach
+version: 0.0.1
+author: clu3less
+depends: mobilesubstrate, preferenceloader
+
+Reach:
+    type: tweak
+    files:
+        - "*.xm"
+        
+# Now for preferences!
+reachprefs:
+    dir: reachprefs
+    type: prefs
+    files:
+    - RPFRootListController.m
+    # - ACellYouUse.m
+    # - ../SomeFileFromYourMainTweak.m
+
+ReachBundle:
+  dir: Resources
+  type: resource-bundle

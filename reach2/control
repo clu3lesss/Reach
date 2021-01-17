@@ -1,0 +1,9 @@
+Package: im.clu3less.reach
+Name: Reach
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: clu3less
+Author: clu3less
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)

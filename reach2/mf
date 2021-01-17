@@ -1,0 +1,19 @@
+TARGET := iphone:clang:latest:13.0
+INSTALL_TARGET_PROCESSES = SpringBoard
+ARCHS = arm64 arm64e
+PREFIX=$(THEOS)/toolchain/Xcode.xctoolchain/usr/bin/
+
+
+include $(THEOS)/makefiles/common.mk
+
+TWEAK_NAME = Reach
+
+Reach_FILES = Tweak.xm 
+Reach_CFLAGS = -fobjc-arc
+
+include $(THEOS_MAKE_PATH)/tweak.mk
+SUBPROJECTS += reachprefs
+include $(THEOS_MAKE_PATH)/aggregate.mk
+BUNDLE_NAME = reach
+reach_INSTALL_PATH = /Library/Application Support
+include $(THEOS)/makefiles/bundle.mk
